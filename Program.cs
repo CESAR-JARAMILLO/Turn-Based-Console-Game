@@ -38,4 +38,28 @@
             Console.WriteLine();
         }
     }
+
+    public void specialAttack(Character opponent)
+    {
+        Random random = new Random();
+        int miss = random.Next(0, 1);
+        if (miss == 0)
+        {
+            Console.WriteLine("-------------------------");
+            Console.WriteLine($"{name}'s special attack missed");
+            Console.WriteLine("-------------------------");
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+        else if (specialPoints > opponent.defensePoints)
+        {
+            Console.WriteLine("-------------------------");
+            Console.WriteLine($"{name} attacked {opponent.name} with special.");
+            opponent.hp = opponent.hp + opponent.defensePoints - specialPoints;
+            Console.WriteLine($"{opponent.name} has {opponent.hp} HP left.");
+            Console.WriteLine("-------------------------");
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+    }
 }
