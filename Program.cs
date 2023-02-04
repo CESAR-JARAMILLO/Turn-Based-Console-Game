@@ -62,4 +62,7 @@
             Console.WriteLine();
         }
     }
+
+    Character hero = new Character("Hero", 80, 22, 14, 38);
+    Character villain = new Character("Villain", 96, 23, 16, 40);
 }
