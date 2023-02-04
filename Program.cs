@@ -7,9 +7,10 @@
     public int defensePoints { get; set; }
     public int specialPoints { get; set; }
 
-    public Character(string name, int attackPoints, int defensePoints, int specialPoints)
+    public Character(string name, int hp, int attackPoints, int defensePoints, int specialPoints)
     {
         this.name = name;
+        this.hp = hp;
         this.attackPoints = attackPoints;
         this.defensePoints = defensePoints;
         this.specialPoints = specialPoints;
